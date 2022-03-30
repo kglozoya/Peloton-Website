@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+body{
+  font-family: 'Kanit', sans-serif;
+}
+
+.rides-parent {
+  /* border: solid black 3px; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
+  padding: 20px;
+}
+
+h3 {
+  border: solid black 3px;
+  margin-bottom: 0;
+  text-align: center;
+  background-color: #060f34;
+  color: white;
+  font-size: 2em;
+}
+.rides-parent img {
+  width: 100%;
+}
+
+.rides-parent:hover> .fav-rides:not(.fav-rides:hover){
+filter: blur(1px)
+}
+
+.fav-rides{
+  cursor: pointer;
+}
+
+.fav-rides:active {
+  filter: grayscale(85%);
+}
+
+.rides-section {
+  margin: 20px;
+}
+.fav-rides {
+  width: 200px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.all-instructors {
+  display: flex;
+  flex-wrap: flex;
+  gap: 10px;
+  justify-content: center;
+  text-align: center;
+  font-weight: bold;
+  align-items: center;
+}
+
+.individ-instructor img {
+  width: 300px;
+  padding-top: 10px;
+  align-content: center;
+}
+.instructor-section {
+  margin: 20px;
+}
+
+.individ-instructor {
+  position: relative;
+}
+.heart-button {
+ display: none;
+}
+
+.heart-button:hover {
+  filter: grayscale(100);
+  cursor: pointer;
+}
+
+.heart-button:active{
+  filter: grayscale(0)
+}
+
+.individ-instructor:hover .heart-button{
+  top: 10px;
+  right: 20px;
+  position: absolute;
+  display: block;
+}
+
+/* default */
+.x-button {
+ display: none;
+}
+.x-button:active{
+  filter:grayscale(100)
+}
+
+.x-button:hover {
+  cursor: pointer;
+}
+
+/* when hovering the whole 'thing' */
+.individ-instructor:hover .x-button {
+  top: 10px;
+  right: 0;
+  position: absolute;
+  font-size:smaller;
+  display: block;
+}
+
+.header img {
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  /* border: solid black 3px; */
+  color: black;
+  font-size: 2em;
+  position: relative;
+  width: 100%;
+}
+
+.header h1 {
+  /* border: solid black 3px; */
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 3em;
+  text-decoration: solid red 3px;
+  white-space: nowrap;
+}
